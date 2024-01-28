@@ -58,8 +58,19 @@ void main(){//Entry point
   *  변하지 않는 변수를 생성할때는 변수 앞에 `final` 명시해주면 되고, 조금 더 구체적으로 변수를 선언하고 싶다면 타입을 적고 앞에 `final`을 붙여주면 된다.
   *  dart의 컴파일러는 알아서 타입을 추론하니까 타입을 적지 않아도 된다.
   */
-
   final PI = 3.14;
   print(PI);
+
+
+  /*
+  * -Late Variables
+  *  `late`는 초기 데이터 없이 변수를 선언할 수 있게 해준다.
+  */
+  late final String lateVar;
+  // print(lateVar); //Error, 컴파일러가 값을 넣기 전에는 접근하지 않아야 한다는 걸 알려주고 초기화를 해주어야 한다.
+  //do something, go to api-
+  lateVar = 'apiData';
+  print(lateVar);
+  // lateVar = 'changeData'; //Error, 여전히 final 변수이기 때문에 딱 한 번만 할당가능.
 
 }

@@ -73,4 +73,15 @@ void main(){//Entry point
   print(lateVar);
   // lateVar = 'changeData'; //Error, 여전히 final 변수이기 때문에 딱 한 번만 할당가능.
 
+
+  /*
+  * -Constant Variables
+  *  `const`는 compile-time constant를 만들어준다.
+  *  `final`과 마찬가지로 한 번 초기화한 후에 변경 불가하지만 const와 fianl의 가장 큰 차이점은 컴파일이 되는 시점에 그 값을 알 수 있는지 없는지의 차이다.
+  *  만약 어떤 값인지 모르고, 그 값이 API로부터 오거나 사용자가 화면에서 입력해야 하는 값이라면 그건 const가 아닌 final이나 var가 되어야 한다.
+  *
+  *     final를 쓰는 대표적인 경우 : API fetching, 사용자가 화면에서 입력해야하는 값 등.
+  *     const를 쓰는 대표적인 경우 : max_allowed_price와 같은 상수.
+  */
+  const constVar = 'data';
 }

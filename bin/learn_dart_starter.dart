@@ -1,6 +1,7 @@
 void main(){//Entry point
   print('hello world');
 
+
   /*
   * -dart는 변수를 `var` 키워드 또는 명시적 타입을 사용해 만든다.
   *  함수나 메소드 내부에 지역변수를 선언할 때는 var를 사용하고 class에서 변수나 property를 선언할 때는 타입을 지정해준다.
@@ -35,13 +36,13 @@ void main(){//Entry point
     print(job); //출력
   }
 
+
   /*
   * -Nullable Variables
   *  기본적으로 dart는 변수 선언시 non-nullable로 null값이 될 수 없다.
   *  null값 참조를 원한다면 타입 선언 시 타입 뒤에 `?`를 붙이면 Nullable이 가능하다.
   *  dart의 null safety라는 건 "어떤 변수, 혹은 데이터가 null이 될 수 있음을 명시하는 것"을 말한다.
   */
-
   String? nullableVar = 'thespeace';
   nullableVar = null;
   nullableVar = "notNull";
@@ -50,4 +51,15 @@ void main(){//Entry point
   // }
   //위 주석된 코드처럼 해당 변수가 null 값이 아닐 때만 isNotEmpty를 실행.
   print(nullableVar?.isNotEmpty);
+
+
+  /*
+  * -Final Variables
+  *  변하지 않는 변수를 생성할때는 변수 앞에 `final` 명시해주면 되고, 조금 더 구체적으로 변수를 선언하고 싶다면 타입을 적고 앞에 `final`을 붙여주면 된다.
+  *  dart의 컴파일러는 알아서 타입을 추론하니까 타입을 적지 않아도 된다.
+  */
+
+  final PI = 3.14;
+  print(PI);
+
 }

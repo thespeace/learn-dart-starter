@@ -22,6 +22,7 @@ void main(){
   *  우선 `collection if`는 `존재할 수도 안할 수도 있는 요소를 가지고 올 수 있다.`
   *  아래 코드를 통해 살펴보자.
   */
+  //collection if
   var giveMeFive = true;
   // List numbers = [1,2,3,4,5];
   var numbers = [
@@ -31,13 +32,23 @@ void main(){
     4,
     if(giveMeFive) 5
   ];
-  if(giveMeFive) {
+  /*if(giveMeFive) {
     numbers.add(6);
-  }
+  }*/
   print(numbers.isNotEmpty);
   print(numbers.first);
   print(numbers.last);
   print(numbers);
+
+  //collection for
+  var oldFriends = ['thespeace', 'john'];
+  var newFriends = [
+    'kim',
+    'seo',
+    'lee',
+    for(var friend in oldFriends) "*$friend*"
+  ];
+  print(newFriends);
 
 
   /*

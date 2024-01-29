@@ -99,5 +99,14 @@ void main(){
   print(player3);
 
 
-
+  /*
+  * -Sets
+  *  요소가 항상 하나씩(유니크)만 있어야 되면 Set을 사용하고, 유니크 할 필요가 없다면 List를 사용하면 된다.
+  */
+  // Set<int> setVar = {1, 2, 3, 4};
+  var setVar = {1, 2, 3, 4};
+  setVar.add(1);
+  setVar.add(1);
+  setVar.add(1);
+  print(setVar);
 }

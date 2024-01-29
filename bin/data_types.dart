@@ -13,4 +13,32 @@ void main(){
   //num : Integer, Double Class의 부모 Class.
   num numVar = 12;
   numVar = 1.1;
+
+
+  /*
+  * -Lists
+  *  `List`나 `var`로 List를 선언할 수 있다.
+  *  dart list의 유용한 점은 `collection if`와 `collection for`을 지원하는 것이다.
+  *  우선 `collection if`는 `존재할 수도 안할 수도 있는 요소를 가지고 올 수 있다.`
+  *  아래 코드를 통해 살펴보자.
+  */
+  var giveMeFive = true;
+  // List numbers = [1,2,3,4,5];
+  var numbers = [
+    1,
+    2,
+    3,
+    4,
+    if(giveMeFive) 5
+  ];
+  if(giveMeFive) {
+    numbers.add(6);
+  }
+  print(numbers.isNotEmpty);
+  print(numbers.first);
+  print(numbers.last);
+  print(numbers);
+
+
+
 }

@@ -64,4 +64,40 @@ void main(){
   print(greeting);
 
 
+  /*
+  * -Maps
+  *  일반적으로 맵은 key와 value를 연결하는 객체입니다.
+  *  키와 값 모두 모든 유형의 객체가 될 수 있습니다.
+  *  각 키는 한 번만 발생하지만 동일한 값을 여러 번 사용할 수 있습니다.
+  */
+  var player = {
+    'name' : 'thespeace',
+    'xp' : 19.99,
+    'superpower' : false,
+  };
+  print(player);
+
+  Map<int, bool> player2 = {
+    1: true,
+    2: false,
+    3: true
+  };
+  print(player2);
+
+  List<Map<String, Object>> player3 = [
+   {
+     'name' : 'thespeace',
+     'xp' : 19.99,
+     'superpower' : false,
+   },
+   {
+     'name' : 'seo',
+     'xp' : 19993.99,
+     'superpower' : false,
+   }
+  ];
+  print(player3);
+
+
+
 }

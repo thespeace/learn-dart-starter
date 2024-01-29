@@ -40,5 +40,17 @@ void main(){
   print(numbers);
 
 
+  /*
+  * -String Interpolation
+  *  $달러 기호를 붙이고 사용할 변수를 적어주면 된다.
+  *  만약 무언가를 계산하고 싶다면 ${ } 형태로 적어주면 된다.
+  *  아래의 코드를 참고하자.
+  */
+  var name = 'thespeace';
+  var age = 21;
+  var greeting = 'Hello everyone, my name is'
+      '$name and I\'m ${age + 2}, nice to meet you!';
+  print(greeting);
+
 
 }

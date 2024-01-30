@@ -68,6 +68,6 @@ String sayRequired({ //null safety를 지키기 위해 타입 앞에 required �
 ///    * Parameters
 ///      1. Positional parameters : 함수에 정의되어있는 파라미터 순서대로 들어감.
 ///      2. Named Parameters : 함수에 정의되어 있는 파라미터 순서를 지키지 않아도 됨.
-///      3. Optional Positional Parameters :
+///      3. Optional Positional Parameters : 함수 정의 시 괄호 안에 대괄호 []를 사용하여 선언, 함수를 호출할 때 이 매개변수들을 생략하거나 포함할 수 있습니다.
 String sayOptional(String name, int age, [String? country = 'korea'])
 => "Hello $name, you are $age, and you come from $country";

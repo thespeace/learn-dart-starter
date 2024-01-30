@@ -4,6 +4,7 @@ void main(){
   print(plus(99, 1));
 
 
+
   print(sayDefault(
       age: 19,
       country: "korea",
@@ -14,6 +15,10 @@ void main(){
       country: "taiwan",
       name: 'seo',
   ));
+
+
+
+  print(sayOptional('thespeace', 30));
 }
 
 
@@ -46,7 +51,7 @@ String sayDefault({ //null safety를 지키기 위해 default value 지정.
   int age = 99,
   String country = 'wakanda',
 }) {
-  return "Hello $name, you are $age, and you com from $country";
+  return "Hello $name, you are $age, and you come from $country";
 }
 
 String sayRequired({ //null safety를 지키기 위해 타입 앞에 required 입력.
@@ -54,5 +59,15 @@ String sayRequired({ //null safety를 지키기 위해 타입 앞에 required �
   required int age,
   required String country,
 }) {
-  return "Hello $name, you are $age, and you com from $country";
+  return "Hello $name, you are $age, and you come from $country";
 }
+
+
+
+/// -Optional Positional Parameters
+///    * Parameters
+///      1. Positional parameters : 함수에 정의되어있는 파라미터 순서대로 들어감.
+///      2. Named Parameters : 함수에 정의되어 있는 파라미터 순서를 지키지 않아도 됨.
+///      3. Optional Positional Parameters :
+String sayOptional(String name, int age, [String? country = 'korea'])
+=> "Hello $name, you are $age, and you come from $country";

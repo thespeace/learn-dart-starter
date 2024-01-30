@@ -19,6 +19,17 @@ void main(){
 
 
   print(sayOptional('thespeace', 30));
+
+
+
+  //QQ Operator
+  print(capitalizeName('thespeace'));
+  print(capitalizeName(null));
+  String? name;
+  name ??= 'thespeace';
+  name = null;
+  name ??= 'another';
+  print(name);
 }
 
 
@@ -71,3 +82,8 @@ String sayRequired({ //null safety를 지키기 위해 타입 앞에 required �
 ///      3. Optional Positional Parameters : 함수 정의 시 괄호 안에 대괄호 []를 사용하여 선언, 함수를 호출할 때 이 매개변수들을 생략하거나 포함할 수 있습니다.
 String sayOptional(String name, int age, [String? country = 'korea'])
 => "Hello $name, you are $age, and you come from $country";
+
+
+/// -QQ Operator(`question question` or `null aware operator`)
+///  `left ?? right` : 좌항이 null이 아니면 좌항을 return, 좌항이 null이면 우항을 return.
+String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';

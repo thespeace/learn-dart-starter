@@ -30,6 +30,10 @@ void main(){
   name = null;
   name ??= 'another';
   print(name);
+
+
+
+  print(reverseListOfNumbers([1, 2, 3]));
 }
 
 
@@ -84,6 +88,19 @@ String sayOptional(String name, int age, [String? country = 'korea'])
 => "Hello $name, you are $age, and you come from $country";
 
 
+
 /// -QQ Operator(`question question` or `null aware operator`)
 ///  `left ?? right` : 좌항이 null이 아니면 좌항을 return, 좌항이 null이면 우항을 return.
 String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
+
+
+/// -Typedef
+///  자료형에 사용자가 원하는 alias를 붙일 수 있게 해준다. (자료형 이름의 별명을 만들 때 사용)
+typedef ListOfInts = List<int>;
+typedef UserInfo = Map<String, String>;
+
+ListOfInts reverseListOfNumbers(ListOfInts list){
+  var reversed = list.reversed;
+  return reversed.toList();
+}

@@ -26,6 +26,32 @@ void main(){
     22,
   );
   bluePlayer.sayHello();
+
+  var apiData = [
+    {
+      "name": "thespeace",
+      "team": "red",
+      "xp": 0,
+      "age": 22,
+    },
+    {
+      "name": "seo",
+      "team": "blue",
+      "xp": 0,
+      "age": 23,
+    },
+    {
+      "name": "kim",
+      "team": "red",
+      "xp": 0,
+      "age": 24,
+    },
+  ];
+  
+  apiData.forEach((playerJson) {
+    var player = Player.fromJson(playerJson);
+    player.sayHello();
+  });
 }
 
 
@@ -79,7 +105,14 @@ class Player{
 
 
 
+  Player.fromJson(Map<String, dynamic> playerJson)
+      : name = playerJson['name'],
+        xp = playerJson['xp'],
+        team = playerJson['team'],
+        age = playerJson['age'];
+
+
   void sayHello(){
-    print("Hi my name is $name"); //this 생략되어 있고, this를 사용하지 않는 것이 권고되고 있다.(method내에서 같은 이름의 variable가 있어서 어쩔 수 없이 사용하는게 아닌 이상)
+    print("Hi my name is $name, 'm $age years old, $team team and xp is $xp"); //this 생략되어 있고, this를 사용하지 않는 것이 권고되고 있다.(method내에서 같은 이름의 variable가 있어서 어쩔 수 없이 사용하는게 아닌 이상)
   }
 }
